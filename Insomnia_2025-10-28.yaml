@@ -1,0 +1,433 @@
+type: collection.insomnia.rest/5.0
+name: APIs - Series Collection
+meta:
+  id: wrk_2743fb09675f4f5c942f98118c60eb21
+  created: 1761612938628
+  modified: 1761694328353
+  description: ""
+collection:
+  - url: http://localhost:3000/users/register
+    name: /users/register
+    meta:
+      id: req_2d39551191ae43cd809d4ca20cab6533
+      created: 1761612938709
+      modified: 1761693225249
+      isPrivate: false
+      description: ""
+      sortKey: -1761612938709
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "name": "Joao",
+          "email": "joao@email.com",
+          "password": "senha123"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/users/login
+    name: /users/login
+    meta:
+      id: req_9f7b37337ab84d75ae44321bce3813f3
+      created: 1761614855445
+      modified: 1761615154296
+      isPrivate: false
+      description: ""
+      sortKey: -1761614855445
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "email": "isa@email.com",
+          "password": "senha123"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_3ba798cb8f66473b9a1c6c24e6dc7b0f
+      - name: User-Agent
+        value: insomnia/11.6.2
+        id: pair_20e7108799224bc0b2027e547c7a6755
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/users/me
+    name: /users/me
+    meta:
+      id: req_fd7bf26695eb405b96cfcec7239c5823
+      created: 1761614942646
+      modified: 1761678413530
+      isPrivate: false
+      description: ""
+      sortKey: -1761614942646
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_f2bc1659d58c407e949d545f3332e96e
+      - name: User-Agent
+        value: insomnia/11.6.2
+        id: pair_2d3aea9481ab4d28b97a69f33c5f5a6a
+      - id: pair_1eb328929f93477f8ccfa1d734d6faae
+        name: Authorization
+        value: Bearer
+          eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJpc2FAZW1haWwuY29tIiwiaWF0IjoxNzYxNjc4NDAxLCJleHAiOjE3NjE3MDcyMDF9.VcoDzcw7sw1yGh4z70p4ZMEdhbY4RNXmHeVw0GJwbHU
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/streams
+    name: /streams - Cadastro
+    meta:
+      id: req_89ffe285e4294532b94c9ba6bbe22528
+      created: 1761615189666
+      modified: 1761677348304
+      isPrivate: false
+      description: ""
+      sortKey: -1761677324831
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "name": "Netflix",
+          "description": "Plataforma de streaming de filmes e séries."
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/streams
+    name: /streams - Lista Streams
+    meta:
+      id: req_8b8407806f03445393c6e2ac16d030d3
+      created: 1761615276335
+      modified: 1761677350086
+      isPrivate: false
+      description: ""
+      sortKey: -1761677324781
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/series
+    name: /series - Cadastro
+    meta:
+      id: req_eaa3f34c96a44ae094dfd864ced4f2d5
+      created: 1761615322954
+      modified: 1761693058858
+      isPrivate: false
+      description: ""
+      sortKey: -1761671279314
+    method: POST
+    body:
+      mimeType: application/json
+      text: >-
+        {
+          "title": "Breaking Bad",
+          "genre": "Drama",
+          "seasons": 5,
+          "streamId": 1,
+          "synopsis": "Um professor de química se torna fabricante de metanfetamina."
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/series/
+    name: /series - Lista Séries
+    meta:
+      id: req_27539a5d11734d4583295986c4324867
+      created: 1761665233897
+      modified: 1761690121884
+      isPrivate: false
+      description: ""
+      sortKey: -1761665233897
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.6.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/streams/1
+    name: /streams/:id - Update
+    meta:
+      id: req_6f2220cd01f54031b6c3dc1b72d90d9a
+      created: 1761674401176
+      modified: 1761688513495
+      isPrivate: false
+      description: ""
+      sortKey: -1761677324756
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "name": "Prime Video",
+          "description": "Streaming atualizado."
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/streams/1
+    name: /streams/:id - Delete
+    meta:
+      id: req_22bd1f5a66b7481db8f06a191f3e8963
+      created: 1761677324731
+      modified: 1761688311347
+      isPrivate: false
+      description: ""
+      sortKey: -1761677324731
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/11.6.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/series/1
+    name: /series - Update
+    meta:
+      id: req_19d7abd1c09f41558901a2acaa2fc07c
+      created: 1761688810780
+      modified: 1761689915285
+      isPrivate: false
+      description: ""
+      sortKey: -1761640088271.5
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "title": "Dexter",
+          "genre": "Terror/Drama",
+          "seasons": 7,
+          "streamId": 1,
+          "synopsis": "Um assassino em brusca de sangue e dor."
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/series/2
+    name: /series/:id - Delete
+    meta:
+      id: req_a2e757ee935f47e3a9f2355b23483733
+      created: 1761690093720
+      modified: 1761692458337
+      isPrivate: false
+      description: ""
+      sortKey: -1761627515458.75
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/11.6.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/series/1/records
+    name: /series - Cria Registro de temporada assistida
+    meta:
+      id: req_c9938ff713084d56927a1e8659f14ca3
+      created: 1761690197297
+      modified: 1761693235448
+      isPrivate: false
+      description: ""
+      sortKey: -1761621229052.375
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "seasonNumber": 2,
+          "status": "assistindo"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_e0dfa2fa23f44ee5a606728caf45018f
+      - name: User-Agent
+        value: insomnia/11.6.2
+        id: pair_07d5ad8334a04a99aa5255a03b171bce
+      - id: pair_67b54fc827d84e2498cf647efd931e86
+        name: Authorization
+        value: Bearer
+          eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJqb2FvQGVtYWlsLmNvbSIsImlhdCI6MTc2MTY5MzIyNywiZXhwIjoxNzYxNzIyMDI3fQ.InLhh3ptF7AkWJq7nVCGvjszOLH2GLLdQzkRig_zhkw
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/series/1/records
+    name: /series - Lista registros
+    meta:
+      id: req_497c657bb5f447078b4c9d6fbc3e2f8a
+      created: 1761690228421
+      modified: 1761693274687
+      isPrivate: false
+      description: ""
+      sortKey: -1761618085849.1875
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_6db8a34ccb0d44088bce833f063303b8
+      - name: User-Agent
+        value: insomnia/11.6.2
+        id: pair_fd39c84bb24f4d7e9b2283473ed1488b
+      - id: pair_37287527721245b6aac4797a41bc0e1f
+        name: Authorization
+        value: Bearer
+          eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJqb2FvQGVtYWlsLmNvbSIsImlhdCI6MTc2MTY5MzIyNywiZXhwIjoxNzYxNzIyMDI3fQ.InLhh3ptF7AkWJq7nVCGvjszOLH2GLLdQzkRig_zhkw
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/series/1/records/6
+    name: /series/:id - Delete Registro Assistido
+    meta:
+      id: req_89dc0b4ccdf74098b111ddd37569a96b
+      created: 1761692471511
+      modified: 1761693203239
+      isPrivate: false
+      description: ""
+      sortKey: -1761616514247.5938
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/11.6.2
+        id: pair_d985228e23b14c29a6d0f5690534f70e
+      - id: pair_902efa7c7a244d729b044668123f76df
+        name: Authorization
+        value: Bearer
+          eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJpc2FAZW1haWwuY29tIiwiaWF0IjoxNzYxNjkyMjM2LCJleHAiOjE3NjE3MjEwMzZ9.-KdeEdDsy7gCCgS5v5yFog7rcXCX0_-HfNoI6UP0xoY
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_0ff2bcb5d50702dcc0035659d2efdaebd6b51183
+    created: 1761612938654
+    modified: 1761612938654
+environments:
+  name: Base Environment
+  meta:
+    id: env_0ff2bcb5d50702dcc0035659d2efdaebd6b51183
+    created: 1761612938650
+    modified: 1761612938650
+    isPrivate: false
