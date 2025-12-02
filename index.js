@@ -1,7 +1,10 @@
-//importando expressm, inicializando a aplicação e definindo a porta da aplicação
+// Carregando variáveis de ambiente
+require('dotenv').config();
+
+// Importando express, inicializando a aplicação e definindo a porta da aplicação
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 //configurando o express para trabalhar com JSON
 app.use(express.json());
@@ -28,7 +31,23 @@ app.use((err, req, res, next) =>{
 })
 
 //iniciando o servidor na porta definida
-app.listen(port, () =>{
+const server = app.listen(port, () =>{
     console.log('Servidor rodando em http://localhost:' + port);
-})
+});
+
+server.on('error', (err) => {
+    console.error('❌ Erro ao iniciar o servidor:', err);
+    process.exit(1);
+});
+
+// Tratamento de erros não capturados
+process.on('uncaughtException', (err) => {
+    console.error('❌ Exceção não capturada:', err);
+    process.exit(1);
+});
+
+process.on('unhandledRejection', (reason, promise) => {
+    console.error('❌ Promise rejeitada não tratada:', reason);
+    process.exit(1);
+});
 
