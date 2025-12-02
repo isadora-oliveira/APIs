@@ -17,8 +17,8 @@ try {
 # 2. Registrar um usuário
 Write-Host "Registrando um novo usuário..." -ForegroundColor Yellow
 $user = @{
-    name = "Teste User"
-    email = "teste@email.com"
+    name = "Isadora Oliveira"
+    email = "isa@email.com"
     password = "senha123"
 } | ConvertTo-Json
 
@@ -32,7 +32,7 @@ try {
         Write-Host "Usuário já existe, fazendo login..." -ForegroundColor Yellow
         # Fazer login
         $loginData = @{
-            email = "teste@email.com"
+            email = "isa@email.com"
             password = "senha123"
         } | ConvertTo-Json
         
@@ -49,8 +49,8 @@ try {
 # 3. Criar uma plataforma de streaming
 Write-Host "Criando plataforma de streaming..." -ForegroundColor Yellow
 $stream = @{
-    name = "Netflix Teste $(Get-Random)"
-    description = "Plataforma de streaming para testes"
+    name = "Amazon Prime $(Get-Random)"
+    description = "Plataforma de streaming da amazon"
 } | ConvertTo-Json
 
 try {
@@ -68,7 +68,7 @@ try {
 Write-Host "Listando todas as plataformas..." -ForegroundColor Yellow
 try {
     $streams = Invoke-RestMethod -Uri "http://localhost:3000/streams" -Method GET
-    Write-Host "Streamings encontrados: $($streams.Count)" -ForegroundColor Green
+    Write-Host "Streamings encontrados: $($streams)" -ForegroundColor Green
 } catch {
     Write-Host "Erro ao listar streamings:" -ForegroundColor Red
     Write-Host $_.Exception.Message
@@ -77,11 +77,11 @@ try {
 # 5. Criar uma série
 Write-Host "Criando uma série..." -ForegroundColor Yellow
 $serie = @{
-    title = "Serie Teste $(Get-Random)"
+    title = "Glee $(Get-Random)"
     streamId = $streamId
-    seasons = 3
-    genre = "Drama"
-    synopsis = "Uma série de testes"
+    seasons = 9
+    genre = "Musical"
+    synopsis = "Uma série de musical"
 } | ConvertTo-Json
 
 try {
